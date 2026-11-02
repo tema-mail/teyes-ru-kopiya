@@ -1,0 +1,90 @@
+.o2{
+    color: #fff;
+    font-size: clamp(16px, 2vw, 46px);
+    line-height: 110%;
+}
+.o3{
+    color: rgba(165, 183, 192, 1);
+    font-size: clamp(12px, 1.8vw, 34px);
+    line-height: 110%;
+}
+.smc{
+    max-width:1920px;
+    width:100%;
+    margin:auto;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+}
+
+.pcflex{
+    display:flex;
+    justify-content: center;
+}
+
+
+.mt0{
+    margin-top:0;
+}
+.nsline{
+    background-color:RGBA(255, 255, 255, .2);
+    height:1px;
+    margin: 10px 20px 20px 20px;
+}
+.imgs .vbg img.imgo{
+    margin-top:0;
+}
+.vs9 .tp{
+    /*width:200px;*/
+    margin-bottom:30px;
+}
+.s3p{
+    margin-top:30px;
+}
+.s3p .tp{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+}
+.s3p .tp img{
+    width:26%;
+}
+.mjb{
+    margin-bottom:30px;
+}
+.a9{
+    margin-top:110px;
+}
+.a9 img{
+
+}
+
+.fal{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.falf{
+    margin-right:10px;
+}
+
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled{
+    opacity:0;
+}
+
+
+.s1p.swiper .swiper-slide{
+    border-radius: 44px;
+    overflow:hidden;
+}
+.s41.swiper .swiper-slide{
+    overflow:hidden;
+    border-radius: 44px;
+}

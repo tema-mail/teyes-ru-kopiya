@@ -1,0 +1,14 @@
+var dr={
+    Result:[
+        {
+            DisplayData:{
+                resultData:{
+                    tplData:{
+                        money2_rev:0.139,
+                        money2_num:0.139,
+                    }
+                }
+            }
+        }
+    ]
+}

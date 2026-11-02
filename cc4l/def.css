@@ -1,0 +1,35 @@
+.o2{
+    color: #fff;
+    font-size: clamp(16px, 2vw, 46px);
+    line-height: 110%;
+}
+.o3{
+    color: rgba(165, 183, 192, 1);
+    font-size: clamp(12px, 1.8vw, 34px);
+    line-height: 110%;
+}
+.smc{
+    max-width:1920px;
+    width:100%;
+    margin:auto;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+}
+.fal{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.falf{
+    margin-right:10px;
+}
+
+
+.swiper-button-next.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled{
+    opacity:0;
+}

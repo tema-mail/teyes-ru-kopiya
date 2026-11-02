@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+    <script src="../_shared/assets/cc4.teyes.cn/7/check.js"> </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="preload" href="../_shared/assets/cdn1.teyes.cn/font/YS Text-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../_shared/assets/cdn.teyes.cn/cc4/no.TTF" as="font" type="font/ttf" crossorigin>
+    <link rel="icon" type="image/x-icon" href="../_shared/assets/cdn.teyes.cn/cc4/favicon.ico">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <link rel="stylesheet" href="../_shared/assets/cdn.teyes.cn/cc4/adas/swiper.css">
+    <script src="../_shared/assets/cdn.teyes.cn/cc4/adas/swiper.js"> </script>
+
+
+    <link rel="stylesheet" href="app.css?22">
+    <link rel="stylesheet" href="750.css?22222">
+    <link rel="stylesheet" href="def.css?22227">
+    <script src="../_shared/assets/cdn.teyes.cn/assets/addons/yfcustomer/js/vue.js"></script>
+    
+
+    <script src="../_shared/assets/teyes.ru/en/true/header/rhl.json"></script>
+    <title>Teyes CC4L</title>
+    <script src="data.js?2222222222"></script>
+    <script src="rote.js?1111"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading" v-show="isloading" style="display:none">
+            <div class="loader"></div>
+            <div class="percent">{{percent}}%</div>
+        </div>
+        <div :class="['page',lg]" v-show="!isloading" style="display:none">
+            <!-- 导航栏 -->
+            <mheader v-show="!tabnav" :changeLang="changeLang" :lg="lg"></mheader>
+            <div :class="['nav',navactive?'active':'']" v-show="tabnav">
+                <div class="navmask" v-if="navactive" @click="navactive=false"> </div>
+                <div class="content f a ">
+                    <div class="logo" @click="open1">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 96.907 21.094" style="width:70px;">
+                              <path id="CC4L_" data-name="CC4L " style="fill:#fff" class="modelicon" d="M415.744,69.792a9.827,9.827,0,0,0-3.3,2.078,8.429,8.429,0,0,0-2.143,3.25,10.626,10.626,0,0,0-.773,4.187,10.97,10.97,0,0,0,.773,4.215,10.588,10.588,0,0,0,2.143,3.368,9.763,9.763,0,0,0,3.3,2.225,10.075,10.075,0,0,0,4.107.82H431.4v-3.66H419.851a6.467,6.467,0,0,1-2.649-.527,6.969,6.969,0,0,1-2.112-1.4,6.277,6.277,0,0,1-1.369-2.167,7.381,7.381,0,0,1-.506-2.723,7.275,7.275,0,0,1,.506-2.724,7.014,7.014,0,0,1,1.369-2.108,5.845,5.845,0,0,1,2.112-1.376,7.1,7.1,0,0,1,2.649-.5H431.4V69.059H419.851A11.093,11.093,0,0,0,415.744,69.792Zm-23.986-.03a9.836,9.836,0,0,0-3.3,2.079,8.431,8.431,0,0,0-2.143,3.25,10.627,10.627,0,0,0-.774,4.187,10.975,10.975,0,0,0,.774,4.216,10.592,10.592,0,0,0,2.143,3.367,9.775,9.775,0,0,0,3.3,2.225,10.083,10.083,0,0,0,4.107.819h11.547v-3.63H395.865a6.467,6.467,0,0,1-2.649-.527,6.969,6.969,0,0,1-2.112-1.4,6.294,6.294,0,0,1-1.37-2.167,7.4,7.4,0,0,1-.5-2.723,7.294,7.294,0,0,1,.5-2.724,6.5,6.5,0,0,1,1.37-2.108,6.114,6.114,0,0,1,2.112-1.376,7.1,7.1,0,0,1,2.649-.5h11.547V69.059H395.865A10.986,10.986,0,0,0,391.758,69.762ZM467.685,86.51V69.089h-3.72v21.08h18.481V86.51H467.685Zm-12.231-4.656H439.235l15.207-12.619h-5.8L434.8,81.034a3.284,3.284,0,0,0-1.4,2.43,1.882,1.882,0,0,0,2.113,1.9h19.939v4.8h4.256v-14.2h-4.256v5.885Z" transform="translate(-385.531 -69.063)"/>
+                        </svg>
+                    </div>
+                    <div class="text f f1">
+                        <div :class="['t',active=='major'?'active':'']" @click="tab('major')">{{ag.t1}}</div>
+                        <div :class="['t',active=='3d'?'active':'']" @click="tab('3d')">{{ag.t3}}</div>
+                        <div :class="['t',active=='t2'?'active':'']" @click="tab('t2')">{{ag.t2}}</div>
+                        <!-- <div :class="['t',active=='t5'?'active':'']" @click="tab('t5')">{{ag.t4}}</div> -->
+                        <div :class="['t',active=='t6'?'active':'']" @click="tab('t6')">{{ag.t5}}</div>
+                        <!-- <div :class="['t',active=='t6'?'active':'']" @click="tab('t6')">{{ag.t6}}</div> -->
+                    </div>
+                    <div class="f a">
+                        <div :class="['bp',navactive?'active':'']" @click='nav'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div :class="['lang',showlang?'active':'']" @click="navlang">
+                            <div class="t1">{{lg.toLocaleUpperCase()}}</div>
+                            <div class="mk ">
+                                <div class="mt" data-lang="ru" @click="changeLng('ru')">RU</div>
+                                <div class="mt" data-lang="en" @click="changeLng('en')">EN</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 视频弹窗 -->
+            <div class="video-pop" v-if="isvideo">
+                <div class="msk " @click="closeVideo" v-if="!ismb"></div>
+                <div class="close" @click="closeVideo"></div>
+                <video :src="videoInfo.video" :poster="videoInfo.post" controls class="videopop" @touchend="vplay"  ref="popupVideo"></video>
+            </div>
+            <div :class="['openVs-pop', 'c'+indexopenVs]" v-if="isopenVs" @click="closeVs">
+                <div class="msk "></div>
+                <div class="close" @click="closeVs"></div>
+                <img :src="vsinfo">
+            </div>
+            <div class="camera-pop" v-if="isCamera">
+                <div class="close" @click="closeCamera"></div>
+                <div class="img img-swiper w100">
+                    <div class="swiper camera" @click="closeCamera">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="g in cameraInfo">
+                                <div class="msk "></div>
+                                <img :src="g">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stabs f a">
+                        <div>
+                            <div class="f a">
+                                <div :class="['stab',cameraIndex=='0'?'active':'']" @click="scamearto('0')">{{ag.t21}}</div>
+                                <div :class="['stab',cameraIndex=='1'?'active':'']" @click="scamearto('1')">{{ag.t22}}</div>
+                            </div>
+                            <div class="sline">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="imgs">
+                <div :class="['img-v', img.ctop]" v-for="img in activeImg">
+                    <div :class="['img',img.issk?'issk':'', img.class, img.id ]" v-if="!img.isswiper" :id="img.id">
+                        <img :src="img.csbg" v-if="img.csbg" :class="[img.is, 'cslbbg']" />
+                        <img :src="img.src" v-if="img.src" :class="[img.is, 'imgo']" />
+                        <div class="ngvk"  v-if='img.ngvk'>
+                            <img :src="img.ngvk" v-if='img.ngvk'  />
+                        </div>
+                        <video :src="img.bg" :poster="img.post" v-if="img.bg" loop :autoplay="iswk" playsinline webkit-playsinline muted :class="[img.is, 'imgo']"></video>
+                        <div v-if="img.p131" class="vmask"></div>
+
+                        <!-- 2 -->
+                        <div v-if="img.a5" class="a5">
+                            <img :src="img.a5">
+                        </div>
+
+                        <div v-if="img.ls" class="ls-img">
+                            <div v-for="l in img.ls" :class="['ls-item', l.class]">
+                                <img :src="l.src">
+                                <img :src="l.big" class="big" v-if='l.big'>
+                                <img :src="l.t" class="ls-t">
+                                <div class="camearline" v-if="l.iscamearline"></div>
+                            </div>
+                        </div>
+                        <div class="vt vo"  v-if="img.vo" >
+                            <img :src="img.vo" />
+                        </div>
+                        <div :class="['img-content', img.contentclass]">
+                            <div>
+                                <div v-if="img.logo" class="l1">
+                                    <img :src="img.logo">
+                                </div>
+                                <div v-if="img.v1" v-html="img.v1" class="v1"></div>
+                                <div v-if="img.v2" v-html="img.v2" class="v2"></div>
+                                
+
+                                <div v-if="img.vb" :class="[' vb', img.vbclass]">
+                                    <div class="pr">
+                                        <img :src="img.vb">
+                                        <div class="vbt" v-if="img.vbt">{{img.vbt}}</div>
+                                    </div>
+                                </div>
+
+                                <div v-if="img.vt" :class="['vt', img.vtclass]">
+                                     <img :src="img.vt">
+                                </div>
+                                <div v-if="img.a8" class="a8">
+                                    <img :src="img.a8">
+                                </div>
+
+                                <div v-if="img.a6">
+                                    <div class="big"  v-if="img.big" >
+                                        <img :src="img.big" />
+                                    </div>
+                                    <img :src="img.a6">
+                                </div>
+                                <!-- 手机自由模式 -->
+                                <div v-if="img.p131" class="t1" v-html="img.p131"></div>
+                                <div v-if="img.t1" class="t1">
+                                    {{img.t1}}
+                                </div>
+                                <div class="f ja">
+                                    <div class="btn1" v-if="img.t3" v-html="img.t3" @click="tab('ff')">
+                                    </div>
+                                    <div class="btn2 f  a active" @click="showVideo(img)" v-if="img.t2">
+                                        <div class="sp"></div>
+                                        <div class="t" v-html="img.t2"></div>
+                                    </div>
+                                </div>
+                                <!-- 03 -->
+                                <div :id="img.id" class="smc" v-if="img.id=='v03'">
+                                    <div class="v1 v031" v-html="img.v031"></div>
+                                    <div class="v032 o2" v-html="img.v032"></div>
+                                    <div class="v033 o2" v-html="img.v033"></div>
+                                    <div class="v034 o2" v-html="img.v034"></div>
+                                    <div class="v0341 o3" v-html="img.v0341"></div>
+                                    <div class="v035 o2" v-html="img.v035"></div>
+                                    <div class="v0351 o3" v-html="img.v0351"></div>
+                                    <div class="v036 o2" v-html="img.v036"></div>
+                                    <div class="v0361 o3" v-html="img.v0361"></div>
+                                    <div class="v037 o2" v-html="img.v037"></div>
+                                    <div class="v0371 o3" v-html="img.v0371"></div>
+                                    <div class="v038 o2" v-html="img.v038"></div>
+                                    <div class="v0381 o3" v-html="img.v0381"></div>
+                                </div>
+                                <div v-if="img.link" class="links f a">
+                                    <div v-for="l in img.link" class="link">
+                                        <a :href="l.src" v-if='l.t'>{{l.t}}</a>
+                                    </div>
+                                </div>
+                                <div class="skv ptobcs" v-if="img.issk=='1'" @click="showVideo(img)">
+                                    <div class="ptobc"></div>
+                                    <div class="pto">
+                                        <div class="bc"></div>
+                                        <video :src='img.bk' playsinline :autoplay="iswk" muted loop></video>
+                                        <div class="tst">{{img.a1}}</div>
+                                    </div>
+                                </div>
+                                <div class="mlist" v-if="img.mlist">
+                                    <div class="mlist-d" v-for="item,index in img.mlist" @click="openVs(item,index)"></div>
+                                </div>
+                                <div class="sm" v-if="img.sm">
+                                    <img :src="img.sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- 轮播 -->
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper==1" :id="img.id">
+                        <div class="swiper s1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g in img.gs' @click="s1to('')">
+                                    <img :src="g.src" :class="[]">
+                                    <img :src="g.big" class="big">
+                                    <div  class="sp">
+                                        <img :src="g.p">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stabs f a">
+                            <div>
+                                <div class="f a">
+                                    <div :class="['stab',tabv1==i?'active':'']" @click.stop="s1to(i)" v-for='g,i in img.gs'>{{g.t}}</div>
+                                </div>
+                                <div class="sline">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper==11" :id="img.id">
+                        <div class="swiper s11">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g,index in img.gs'>
+                                    <img :src="g.src" :class="[]" @click="s11to('')">
+                                    <img :src="g.big" v-if="g.big" :class="['big']" @click="s11to('')">
+                                    <div class="tp" v-if="tabv11==index">
+                                        <img :src="g.p" :class="[]" @click="s11to('')">
+                                    </div>
+                                    <div class="ptobcs adas">
+                                        <div v-if="index==2" class="ptobc"></div>
+                                        <div v-if="index==2" class="pto" @click="showVideo(img)">
+                                            <div class="bc"></div>
+                                            <video :src='img.bk' playsinline :autoplay="iswk" muted loop></video>
+                                            <div class="tst">{{img.a1}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stabs f a">
+                            <div>
+                                <div class="f a">
+                                    <div :class="['stab',tabv11==i?'active':'']" @click="s11to(i)" v-for='g,i in img.gs'>{{g.t}}</div>
+                                </div>
+                                <div class="sline">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 摄像头 -->
+                    <div :class="['img img-swiper bigsv', img.class]" v-if="img.isswiper==2" :id="img.id">
+                        <img :src="img.src" :class="[img.is]">
+                        <div class="big1" @click="openCamera(0,img)">
+                            <div class="bigk"></div>
+                            <img src="img/big.webp">
+                        </div>
+                        <div class="big2" @click="openCamera(1,img)">
+                            <img src="img/big.webp">
+                        </div>
+                        <div class="mlist" v-if="img.plist">
+                            <div class="mlist-d" v-for="item,index in img.plist" @click="openVs(item,index)"></div>
+                        </div>
+                    </div>
+
+                    <!-- bibi -->
+                    <div :class="['img img-swiper vs2 mt70', img.class ]" v-if="img.isswiper==3" :id="img.id">
+                        <div class="ptop">
+                            <img :src="img.src">
+                        </div>
+
+                        <div class="bibi ptobcs"  @click="showVideo(img)">
+                            <div class="ptobc"></div>
+                            <div class="pto">
+                                <div class="bc"></div>
+                                <video :src='img.bk' playsinline :autoplay="iswk" muted loop></video>
+                                <div class="tst">{{img.a1}}</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper s2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g in img.gs' @click="s2to('')">
+                                    <img :src="g.p" :class="[]">
+                                    <img :src="g.big" v-if="g.big" :class="['big']">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tv">
+                            <img :src="img.v">
+                        </div>
+                        <div class="stabs f a">
+                            <div>
+                                <div class="f a">
+                                    <div :class="['stab',tabv2==i?'active':'']" @click="s2to(i)"  v-for='g,i in img.gs'>{{g.v}}</div>
+                                </div>
+                                <div class="sline">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 摄像头 -->
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper==4" :id="img.id">
+                        <div class="toc">
+                            <img :src="img.src">
+                            <!-- <div class="vleft" v-if="tabv3!=0" @click="s3toprev()"></div> -->
+                            <!-- <div class="vright" v-if="tabv3!=3"  @click="s3tonext('')"></div> -->
+                        </div>
+
+                        <div class="swiper s3" >
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide " v-for='g in img.gs' @click="s3to('')">
+                                    <img :src="g.src" :class="[]">
+                                    <div class="tp">
+                                        <img :src="g.t">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-next vright" ></div>
+                            <div class="swiper-button-prev vleft "  ></div>
+
+                        </div>
+                    </div>
+
+                    <!-- pc 自由模式 -->
+                    <div :class="['img img-swiper  ', img.class ]" v-if="img.isswiper==5" :id="img.id">
+
+                        <div class="m20">
+                            <div class="swiper s4 ">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for='g in img.gs' @click="s4to('')">
+                                        <img :src="g.src" :class="[]">
+                                        <img :src="g.big" v-if="g.big" :class="['big']">
+                                        <div class="tp">
+                                            <img :src="g.t">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stabs-m pc f a">
+                                <div>
+                                    <div class="f a">
+                                        <div :class="['stab',tabv4==i?'active':'']" @click="s4to(i)" v-for='g,i in img.gs'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper=='s5'" :id="img.id">
+                        <div class="swiper s5">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g in img.gs' @click="s5to('')">
+                                    <img :src="g" :class="[]">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stabs-m f a">
+                            <div>
+                                <div class="f a">
+                                    <div :class="['stab',tabv5==i?'active':'']" @click="s5to(i)" v-for="g,i in img.gs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 手机端 -->
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper=='s5v'" :id="img.id">
+                        <img :src="img.src" class="w100">
+                        <div :class="['vb', img.vbclass]">
+                            <img :src="img.vb">
+                            <div class="vbt" v-if="img.vbt">{{img.vbt}}</div>
+                        </div>
+                        <div :class="['vt', img.vtclass]">
+                            <img :src="img.vt">
+                        </div>
+
+                        <div class="s5v-content">
+                            <div class="swiper s5v">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for='g,i in img.gs' @click="s5vto('')">
+                                        <div>
+                                            <img :src="g.src" :class="[]">
+                                            <div v-show="tabv5v==i" class="stabs-t">{{g.t}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stabs-m f a">
+                                <div>
+                                    <div class="f a">
+                                        <div :class="['stab',tabv5v==i?'active':'']" @click="s5vto(i)" v-for="g,i in img.gs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bibi -->
+                    <div :class="['img img-swiper mt70', img.class ]" v-if="img.isswiper=='s6'" :id="img.id">
+                        <img :src="img.src" class="w100">
+                        <div :class="['vb', img.vbclass]">
+                            <img :src="img.vb">
+                            <div class="vbt" v-if="img.vbt">{{img.vbt}}</div>
+                        </div>
+                        <div :class="['vt', img.vtclass]">
+                            <img :src="img.vt">
+                        </div>
+
+                        <div class="skv ptobcs"  @click="showVideo(img)">
+                            <div class="ptobc"></div>
+                            <div class="pto">
+                                <div class="bc"></div>
+                                <video :src='img.bk' playsinline :autoplay="iswk" muted loop></video>
+                                <div class="tst">{{img.a1}}</div>
+                            </div>
+                        </div>
+
+                        <div class="swiper s6">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g,index in img.gs' @click.stop="s6to('')">
+                                    <div>
+                                        <img :src="g.src" :class="[]">
+                                        <div v-show="tabv6==index" class="stabs-t">{{g.t}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stabs-m f a">
+                            <div>
+                                <div class="f a">
+                                    <div :class="['stab',tabv6==i?'active':'']" @click="s6to(i)" v-for="g,i in img.gs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 待机 -->
+                    <div :class="['img img-swiper s8v' ]" v-if="img.isswiper=='s8'" :id="img.id">
+                        <div class="swiper s8">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for='g,i in img.gs' @click="s8to('')">
+                                    <img :src="g.p">
+                                    <div class="tv">
+                                        <img :src="g.vb" class="vbg">
+                                        <img :src="g.vt" class="vtg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stabs-m f a">
+                            <div>
+                                <div class="f a">
+                                    <div style="width:20px" :class="['stab',tabv8==i?'active':'']" @click="s8to(i)" v-for="g,i in img.gs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div :class="[ ismb?'':'pcflex']"  :id="img.id">
+                        <!-- nap -->
+                        <div :class="['img img-swiper ', img.class ]" v-if="img.isswiper=='s7'" >
+                            <div class="fal">
+                                <img :src="img.src" class="tp falf">
+                                <img :src="img.tsrc" class="tp">
+                            </div>
+                            <div class="swiper s7">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for='g in img.gs' @click="s7to('')">
+                                        <img :src="g" :class="[]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stabs-m f vs7 a">
+                                <div>
+                                    <div class="f a">
+                                        <div :class="['stab',tabv7==i?'active':'']" @click="s7to(i)" v-for="g,i in img.gs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- yahu -->
+                        <div :class="['img img-swiper ', img.class ]" v-if="img.isswiper=='s7'" >
+                            <div class="nsline" v-if="ismb"></div>
+                            <div  class="fal">
+                                 <img :src="img.vsrc" class="tp falf">
+                                 <img :src="img.tvsrc" class="tp">
+                            </div>
+                            <div class="swiper s9">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" v-for='g in img.vgs' @click="s9to('')">
+                                        <img :src="g" :class="[]">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stabs-m f vs9 a">
+                                <div>
+                                    <div class="f a">
+                                        <div :class="['stab',tabv9==i?'active':'']" @click="s9to(i)" v-for="g,i in img.vgs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>
+<script src="../_shared/assets/cc4.teyes.cn/7/headv4.js"> </script>
+<script>
+new Vue({
+    el: '#app',
+    data: function() {
+        return {
+            tabnav: false,
+            isopenVs: false,
+            indexopenVs: '',
+            vsinfo: '',
+            isloading: true,
+            cameraIndex: 0,
+            cameraInfo: [],
+            isCamera: false,
+            isvideo: false,
+            videoInfo: {},
+            showlang: false,
+            navactive: false,
+            ismb: false,
+            lg: 'en',
+            ag: {},
+            percent: 0,
+            videoActive: '',
+            active: 'major',
+            tabIds: ['major', 't2', 'bibi', 't5', 't6'],
+            tabv1: '0',
+            tabv2: '0',
+            tabv3: '0',
+            tabv4: '0',
+            tabv11: '0',
+            tabv5: '0',
+            tabv6: '0',
+            tabv7: '0',
+            tabv8: '0',
+            tabv9: '0',
+            tabvsa: '0',
+            tabv5v: '0',
+            activeImg: [],
+            imgs: {},
+            iswk: true,
+            video: {
+                ru: {
+                    t1: 'http://1251445182.vod2.myqcloud.com/483a0068vodtransgzp1251445182/b24b8a4e1397757893432821064/v.f100040.mp4'
+                }
+            },
+            lang: {
+                ru: {
+                    t1: 'Характеристики',
+                    t2: 'Удобство',
+                    t3: '3D-интерфейс',
+                    t4: 'Отдых',
+                    t5: 'Параметры',
+                    t6: 'Параметры',
+
+                    t7: 'Добро пожаловать на борт!',
+                    t8: 'Просмотреть больше',
+                    t9: ' Просмотреть видео',
+
+                    t10: '',
+
+                    t11: 'Режим кинотеатра',
+                    t12: 'Музыкальный режим',
+                    t13: 'Режим PRO',
+                    t14: 'Режим MONO',
+                    t15: 'Режим LCRS',
+
+
+                    t16: 'Эффективное взаимодействие',
+                    t17: 'Гибкая планировка',
+                    t18: 'Всего одно нажатие',
+                    t19: 'Разнообразные виджеты',
+                    t20: '',
+
+                    t21: 'Цифровая камера заднего вида',
+                    t22: 'Камера заднего вида AHD',
+                    "text32": "Пожалуйста, поверните телефон вертикально",
+
+                },
+                en: {
+                    t1: 'Features',
+                    t2: 'Convenience',
+                    t3: '3D Interface',
+                    t4: 'Rest',
+                    t5: 'Specifications',
+                    t6: 'Specifications',
+
+
+                    // t7: 'Powerful CPU',
+                    // t8: 'Heat Dissipation',
+                    // t9: 'Microphone',
+                    // t10: 'Dual-Frequency GPS',
+
+                    t11: 'Cinema Mode',
+                    t12: 'Music Mode',
+                    t13: 'Pro Mode',
+                    t14: 'MONO Mode',
+                    t15: 'LCRS Mode',
+
+                    t16: 'Efficient Interaction',
+                    t17: 'Flexible Layout',
+                    t18: 'One-Touch Access',
+                    t19: 'Rich Widgets',
+                    t20: '',
+
+                    t21: 'Digital Rear View Camera',
+                    t22: 'AHD Rear View Camera',
+                    "text32": "Please rotate your phone to portrait mode",
+
+                    // t24:'Driving Assistance',
+                    // t25:'Teyes Online'
+                },
+            }
+        }
+    },
+    created() {
+        this.imgs = dataimgs
+        var lang = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if (window.localStorage['lang']) {
+            lang = window.localStorage['lang'];
+        }
+        if (lang.indexOf('ru') >= 0 || lang.indexOf('uk') >= 0 || lang.indexOf('kk') >= 0 || lang.indexOf('be') >= 0) {
+            this.lg = 'ru'
+        }
+        // this.lg = 'ru'
+
+        if (this.lg == 'ru') {
+            this.ag = this.lang.ru
+        } else {
+            this.ag = this.lang.en
+        }
+
+
+        if (document.body.clientWidth < 750) {
+            this.ismb = true
+            this.activeImg = this.imgs[this.lg]['mb']
+        } else {
+            this.ismb = false
+            this.activeImg = this.imgs[this.lg]['pc']
+        }
+
+        this.lft = (window.innerWidth-1280)/2-0
+        this.lft = this.lft>0?this.lft:0
+        this.sv= 1;
+
+        if(window.innerWidth<1280){
+            lft = 20
+            this.sv= 1;
+
+        }
+       
+
+        window.onresize = () => {
+            if (document.body.clientWidth < 750) {
+                this.ismb = true
+                this.activeImg = this.imgs[this.lg]['mb']
+
+            } else {
+                this.ismb = false
+                this.activeImg = this.imgs[this.lg]['pc']
+            }
+            this.sv= 1;
+
+            this.lft = (window.innerWidth-1280)/2-0
+            this.lft = this.lft>0?this.lft:0
+            if(window.innerWidth<1280){
+                lft = 20
+                this.sv= 1;
+            }
+            
+            this.initSwiper()
+
+        };
+
+        // this.iswk =true
+        this.preloadImages(this.imgs, (res) => {
+
+        }, percent => {
+            this.percent = percent
+            if (percent == 100) {
+                setTimeout(() => {
+                    // this.isloading = false
+                    this.$nextTick(() => {
+                        this.initSwiper()
+                        this.isloading = false
+
+                        window.addEventListener('scroll', this.onScroll);
+
+                    })
+
+                }, 1000)
+
+                setTimeout(() => {
+                    if (this.ismb) {
+                        this.playall()
+                    }
+                }, 3000)
+            }
+            console.log(`已加载 ${percent}%`);
+        })
+
+    },
+    mounted() {
+        // var src = require()
+        rotate(this.ag.text32, 'img/roate.svg')
+
+        // const video = document.createElement('video');
+        // video.playsInline = true; // ✅ 启用内联播放
+
+        // // 检查是否支持
+        // if ('playsInline' in video) {
+        //     this.iswk = true
+        // }else{
+        //     this.iswk = false
+        // }
+        // this.iswk = true
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.addEventListener('touchstart', function(e) {
+                // 播放所有不在 .video-pop 内部的 video 元素
+                document.querySelectorAll('video').forEach(video => {
+                    if (video.classList.contains('videopop')) return; // 排除 video-pop 内部的 video
+                    video.muted = true;
+                    video.playsInline = true;
+                    video.webkitPlaysInline = true;
+                    video.autoplay = true;
+
+                    video.play().catch(err => {
+                        console.warn('播放失败:', err);
+                    });
+                });
+
+            });
+        });
+
+
+
+    },
+    methods: {
+        open1(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        },
+        vplay(){
+            const video = this.$refs.popupVideo;
+              if (video) {
+                video.play().catch(err => {
+                  console.warn('播放失败:', err);
+                });
+              }
+        },
+        changeLang(lg) {
+            lg = lg.toLowerCase()
+            this.lg = lg
+            if (lg.toLowerCase() == 'ru') {
+                if (document.body.clientWidth < 750) {
+                    this.ismb = true
+                    this.activeImg = this.imgs[lg]['mb']
+                } else {
+                    this.ismb = false
+                    this.activeImg = this.imgs[lg]['pc']
+
+                }
+            } else {
+                if (document.body.clientWidth < 750) {
+                    this.ismb = true
+                    this.langs = this.lang['mb']
+                    this.activeImg = this.imgs[lg]['mb']
+                } else {
+                    this.ismb = false
+                    this.langs = this.lang['pc']
+                    this.activeImg = this.imgs[lg]['pc']
+                }
+            }
+
+            if (this.lg == 'ru') {
+                this.ag = this.lang.ru
+            } else {
+                this.ag = this.lang.en
+            }
+        },
+        playall() {
+            document.querySelectorAll('video').forEach(video => {
+                // 可选：设置内联播放
+                video.playsInline = true;
+                video.webkitPlaysInline = true;
+                video.muted = true;
+
+                // 自动播放（需静音才能生效，尤其是 iOS）
+                video.play().catch(err => {
+                    console.warn('播放失败：', err);
+                });
+                // video.addEventListener('canplay', () => {
+                //     video.play()
+                // })
+            });
+
+        },
+
+        bgvideo(v, c) {
+            const video = document.querySelector('#' + v);
+            // const canvas = document.querySelector('#' + c);
+            // const ctx = canvas.getContext('2d');
+
+            // ✅ 设置跨域，必须在设置 src 前（如果你在 HTML 写了 src，也 OK，只要跨域服务器允许）
+            // video.crossOrigin = 'anonymous';
+
+            // ✅ 自动播放兼容设置
+            video.muted = true;
+            video.playsInline = true;
+            video.loop = false; // 手动实现循环更兼容
+
+            video.addEventListener('canplay', () => {
+                // canvas.width = window.innerWidth 
+                // canvas.height = window.innerWidth / (video.videoWidth /video.videoHeight )
+                // const drawFrame = () => {
+                //     try {
+                //         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                //     } catch (e) {
+                //         console.warn('drawImage error (可能是跨域问题):', e);
+                //     }
+                //     requestAnimationFrame(drawFrame);
+                // };
+
+                // drawFrame();
+            });
+
+            // 手动实现无限循环播放，兼容某些浏览器 loop 属性失效问题
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                video.play();
+            });
+
+            // 尝试自动播放
+            if (this.iswk) {
+                // const playPromise = video.play();
+                // if (playPromise !== undefined) {
+                //     playPromise.catch((error) => {
+                //         // console.warn('Autoplay failed:', error);
+                //     });
+                // }
+            }
+
+        },
+        openVs(item, index) {
+            this.vsinfo = item
+            this.isopenVs = true
+            this.indexopenVs = index
+        },
+        closeVs() {
+            this.isopenVs = false
+            this.indexopenVs = ''
+        },
+        onScroll() {
+            const offset = 200;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+            if(scrollTop<200){
+                this.tabnav = false
+            }else{
+                this.tabnav = true
+            }
+            for (let i = this.tabIds.length - 1; i >= 0; i--) {
+                const id = this.tabIds[i];
+                const el = document.getElementById(id);
+                if (el) {
+                    const elTop = el.getBoundingClientRect().top + scrollTop;
+
+                    if (scrollTop + offset >= elTop) {
+                        this.active = id;
+                        break;
+                    }
+                }
+            }
+        },
+
+        preloadImages(dataimgs, callback, onProgress) {
+            const imageUrls = [];
+            Object.values(dataimgs).forEach(lang => {
+                if (!this.ismb) {
+                    lang.pc.forEach(item => {
+                        if (item.src) imageUrls.push(item.src);
+                        if (item.gs && Array.isArray(item.gs)) {
+                            item.gs.forEach(g => {
+                                if (g.src) imageUrls.push(g.src);
+                            });
+                        }
+                    });
+                } else {
+                    lang.mb.forEach(item => {
+                        if (item.src) imageUrls.push(item.src);
+                        if (item.gs && Array.isArray(item.gs)) {
+                            item.gs.forEach(g => {
+                                if (g.src) imageUrls.push(g.src);
+                            });
+                        }
+                    });
+                }
+
+
+            });
+
+            let loaded = 0;
+            const total = imageUrls.length;
+
+            if (total === 0) {
+                if (typeof callback === 'function') callback();
+                if (typeof onProgress === 'function') onProgress(100);
+                return;
+            }
+
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.onload = img.onerror = () => {
+                    loaded++;
+                    if (typeof onProgress === 'function') {
+                        const percent = Math.round((loaded / total) * 100);
+                        onProgress(percent);
+                    }
+                    if (loaded === total && typeof callback === 'function') {
+                        callback();
+                    }
+                };
+                img.src = url;
+            });
+        },
+
+        scamearto(i) {
+            this.cameraIndex = i
+            this.camera.slideTo(i)
+        },
+        openCamera(index, data) {
+            this.cameraInfo = data.ig
+            this.isCamera = true
+            setTimeout(() => {
+                this.camera = new Swiper('.camera', {
+                    effect: 'fade',
+                })
+                this.camera.slideTo(index)
+                this.cameraIndex = index
+
+            }, 300)
+
+        },
+        closeCamera() {
+            this.isCamera = false
+        },
+        closeVideo() {
+            this.isvideo = false
+        },
+        showVideo(data) {
+            this.isvideo = true
+            this.videoInfo = data
+        },
+        navlang() {
+            this.showlang = !this.showlang
+
+        },
+        nav() {
+            this.navactive = !this.navactive
+        },
+        tab(type) {
+            this.active = type;
+
+            this.$nextTick(() => {
+                const target = document.getElementById(type);
+                const offset = 110;
+
+                if (target) {
+                    // 目标元素相对于整个页面顶部的位置
+                    const targetTop = target.getBoundingClientRect().top + window.scrollY;
+
+                    window.scrollTo({
+                        top: targetTop - offset,
+                        behavior: 'smooth'
+                    });
+                }
+
+                this.navactive = false;
+            });
+        },
+
+        initSwiper() {
+            var that = this
+            this.sass = new Swiper('.sass', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                // autoplay: { delay: 1000 * 10, },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabvsa = that.sass.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabvsa = that.sass.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabvsa = that.sass.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabvsa = that.sass.activeIndex
+                    },
+                },
+            })
+            this.s1 = new Swiper('.s1', {
+                updateOnWindowResize: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv1 = that.s1.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv1 = that.s1.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv1 = that.s1.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv1 = that.s1.activeIndex
+                    },
+                },
+            })
+            this.s2 = new Swiper('.s2', {
+                updateOnWindowResize: true,
+                effect: 'fade',
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv2 = that.s2.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv2 = that.s2.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv2 = that.s2.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv2 = that.s2.activeIndex
+                    },
+                },
+            })
+            
+            this.s3 = new Swiper('.s3', {
+                // slidesPerView: "auto",
+                    allowTouchMove:false,
+                autoHeight:true,
+                // autoWidth:true,
+                // freeMode: true,
+                updateOnWindowResize: true,
+                slidesOffsetAfter:this.lft,
+                slidesOffsetBefore:this.lft,
+                slidesPerView:  this.sv,
+                spaceBetween: 30,
+                fadeEffect: {
+                    crossFade: true
+                },
+                
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+               
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv3 = that.s3.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv3 = that.s3.activeIndex
+                    },
+                    transitionEnd: function() {
+                        // that.tabv3 = that.s3.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv3 = that.s3.activeIndex
+                    },
+                },
+            })
+            this.s4 = new Swiper('.s4', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv4 = that.s4.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv4 = that.s4.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv4 = that.s4.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv4 = that.s4.activeIndex
+                    },
+                },
+            })
+            this.s5 = new Swiper('.s5', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv5 = that.s5.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv5 = that.s5.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv5 = that.s5.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv5 = that.s5.activeIndex
+                    },
+                },
+            })
+            this.s5v = new Swiper('.s5v', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv5v = that.s5v.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv5v = that.s5v.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv5v = that.s5v.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv5v = that.s5v.activeIndex
+                    },
+                },
+            })
+            this.s6 = new Swiper('.s6', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv6 = that.s6.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv6 = that.s6.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv6 = that.s6.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv6 = that.s6.activeIndex
+                    },
+                },
+            })
+            this.s7 = new Swiper('.s7', {
+                effect: 'fade',
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv7 = that.s7.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv7 = that.s7.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv7 = that.s7.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv7 = that.s7.activeIndex
+                    },
+                },
+            })
+            this.s8 = new Swiper('.s8', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv8 = that.s8.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv8 = that.s8.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv8 = that.s8.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv8 = that.s8.activeIndex
+                    },
+                },
+            })
+
+            if(this.s9){
+                this.s9.destroy()
+            }
+
+            this.s9 = new Swiper('.s9', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv9 = that.s9.activeIndex
+                    },
+                    slideChange: function() {
+                        that.tabv9 = that.s9.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv9 = that.s9.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv9 = that.s9.activeIndex
+                    },
+                },
+            })
+            
+            if(this.s11){
+                this.s11.destroy()
+                this.tabv11 =0
+            }
+            this.s11 = new Swiper('.s11', {
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: { delay: 10000,pauseOnMouseEnter:true },
+                on: {
+                    slideChangeTransitionEnd: function() {
+                        that.tabv11 = that.s11.activeIndex
+                        console.log(22)
+                    },
+                    slideChange: function() {
+                        that.tabv11 = that.s11.activeIndex
+                    },
+                    transitionEnd: function() {
+                        that.tabv11 = that.s11.activeIndex
+                    },
+                    touchEnd: function() {
+                        that.tabv11 = that.s11.activeIndex
+                    },
+                },
+            })
+            
+        },
+
+        // 通用切换方法
+        slideToOrNext(swiper, tabKey, index) {
+            console.log(swiper)
+            if (index !== '') {
+                swiper.slideTo(index)
+                this[tabKey] = index
+            } else {
+                if (swiper.activeIndex === swiper.slides.length - 1) {
+                    swiper.slideTo(0)
+                    this[tabKey] = 0
+                } else {
+                    swiper.slideNext()
+                    this[tabKey] = swiper.activeIndex
+                }
+            }
+        },
+
+        // 具体调用方法（变得非常简洁）
+        sato(index) {
+            this.slideToOrNext(this.sass, 'tabvsa', index)
+        },
+        s1to(index) {
+            this.slideToOrNext(this.s1, 'tabv1', index)
+        },
+        s2to(index) {
+            this.slideToOrNext(this.s2, 'tabv2', index)
+        },
+        s3to(index) {
+            this.slideToOrNext(this.s3, 'tabv3', index)
+        },
+        s4to(index) {
+            this.slideToOrNext(this.s4, 'tabv4', index)
+        },
+        s5to(index) {
+            this.slideToOrNext(this.s5, 'tabv5', index)
+        },
+        s5vto(index) {
+            this.slideToOrNext(this.s5v, 'tabv5v', index)
+        },
+        s6to(index) {
+            this.slideToOrNext(this.s6, 'tabv6', index)
+        },
+        s7to(index) {
+            this.slideToOrNext(this.s7, 'tabv7', index)
+        },
+        s8to(index) {
+            this.slideToOrNext(this.s8, 'tabv8', index)
+        },
+        s9to(index) {
+            this.slideToOrNext(this.s9, 'tabv9', index)
+        },
+        s11to(index) {
+            this.slideToOrNext(this.s11, 'tabv11', index)
+        },
+        s3tonext(index) {
+            this.s3.slideNext()
+        },
+        s3toprev(index) {
+            this.s3.slidePrev()
+        },
+        changeLng(lang) {
+
+            window.localStorage['lang'] = lang
+            this.lg = lang
+
+            if (this.ismb) {
+                this.activeImg = this.imgs[this.lg]['mb']
+            } else {
+                this.activeImg = this.imgs[this.lg]['pc']
+            }
+            // this.initSwiper()
+
+            if (this.lg == 'ru') {
+                this.ag = this.lang.ru
+            } else {
+                this.ag = this.lang.en
+            }
+        }
+    }
+})
+</script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3T0MGJ5C82');
+</script>
